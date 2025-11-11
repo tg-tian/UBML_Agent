@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/check-box.schema.json",
+    "title": "check-box",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a check box",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of check box component",
+            "type": "string",
+            "default": "check-box"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disabled": {
+            "type": "string",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "text": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "value": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ]
+}

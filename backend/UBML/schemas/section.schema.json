@@ -1,0 +1,143 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/section.schema.json",
+    "title": "section",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Section",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Section component",
+            "type": "string",
+            "default": "section"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "contentClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "enableAccordion": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "accordionMode": {
+            "description": "",
+            "type": "string",
+            "default": "default"
+        },
+        "enableMaximize": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "expanded": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "fill": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "headerClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "size": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "width": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "number"
+                }
+            },
+            "default": null
+        },
+        "showHeader": {
+            "description": "",
+            "type": "string",
+            "default": true
+        },
+        "mainTitle": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "subTitle": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "headerContentClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "extendClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "expandStatus": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "toolbar": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "default": "section-toolbar"
+                },
+                "position": {
+                    "type": "string",
+                    "default": "inHead"
+                },
+                "buttons": {
+                    "type": "array",
+                    "default": []
+                }
+            },
+            "default": null
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

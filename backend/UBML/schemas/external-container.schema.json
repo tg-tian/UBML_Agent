@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/external-container.schema.json",
+    "title": "external-container",
+    "description": "A Farris Visual Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a external-container",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of external-container",
+            "type": "string",
+            "default": "external-container"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string",
+                    "default": ""
+                }
+            },
+            "default": {}
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "url": {
+            "description": "The url that load the schema from",
+            "type": "string"
+        },
+        "externalComponent": {
+            "description": "The unique identifier for component",
+            "type": "ojbect",
+            "default": {}
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "externalComponent"
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/switch.schema.json",
+    "title": "textarea",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a textarea",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of textarea component",
+            "type": "string",
+            "default":"textarea"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "rows": {
+            "description": "",
+            "type": "number"
+        },
+        "showCount": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "maxLength": {
+            "description": "",
+            "type": "number",
+            "default": 0
+        },
+        "updateOn": {
+            "description": "",
+            "type": "string",
+            "default": "blur"
+        },
+        "allowUnlimtedWhenEmpty": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "autoHeight": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/page-header.schema.json",
+    "title": "page-header",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Page Header",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Page Header component",
+            "type": "string",
+            "default": "page-header"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "showIcon": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "icon": {
+            "description": "",
+            "type": "string",
+            "default": "f-icon-page-title-record"
+        },
+        "iconClass": {
+            "description": "",
+            "type": "string",
+            "default": "f-text-orna-bill"
+        },
+        "title": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "subTitle": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "toolbar": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "appearance": {
+                    "description": "",
+                    "type": "object",
+                    "properties": {
+                        "class": {
+                            "type": "string",
+                            "default":"col-6"
+                        }
+                    }
+                },
+                "id": {
+                    "description": "",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "",
+                    "type": "string",
+                    "default": "response-toolbar"
+                },
+                "alignment": {
+                    "description": "The alignment of Response Toolbar Button.",
+                    "type": "string",
+                    "default": "right"
+                },
+                "buttons": {
+                    "description": "The items of Response Toolbar.",
+                    "type": "array",
+                    "default": []
+                }
+            }
+        },
+        "buttonClass": {
+            "description": "",
+            "type": "string",
+            "default": "col-6"
+        },
+        "titleContentClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "contentClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "downContentClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "showPagination": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "prePaginationDisabled": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "nextPaginationDisabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "visible":{
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "buttonsVisible":{
+            "description": "",
+            "type": "boolean",
+            "default": true
+        }        
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

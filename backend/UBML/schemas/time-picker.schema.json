@@ -1,0 +1,110 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/time-picker.schema.json",
+    "title": "time-picker",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a time picker",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of time picker component",
+            "type": "string",
+            "default": "time-picker"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disabled": {
+            "type": "string",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "require": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "format": {
+            "description": "",
+            "type": "enum",
+            "default": "HH:mm:ss"
+        },
+        "showHeader":{
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "use12Hours":{
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "hourStep":{
+            "description": "",
+            "type": "number",
+            "default": 1
+        },
+        "minuteStep":{
+            "description": "",
+            "type": "number",
+            "default": 1
+        },
+        "secondStep":{
+            "description": "",
+            "type": "number",
+            "default": 1
+        }
+        
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ]
+}

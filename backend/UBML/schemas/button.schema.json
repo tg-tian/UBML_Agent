@@ -1,0 +1,67 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/button.schema.json",
+    "title": "button",
+    "description": "按钮组件",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "按钮组件的唯一标识",
+            "type": "string"
+        },
+        "type": {
+            "description": "按钮组件的类型标识",
+            "type": "string",
+            "default": "button"
+        },
+        "appearance": {
+            "description": "按钮组件的外观样式",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "description": "按钮组件的类名",
+                    "type": "string"
+                },
+                "style": {
+                    "description": "按钮组件的样式",
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "disable": {
+            "description": "按钮组件的禁用状态",
+            "type": "string",
+            "default": false
+        },
+        "text": {
+            "description": "按钮组件的文本",
+            "type": "string",
+            "default": ""
+        },        
+        "textAlign": {
+            "description": "按钮组件的文本对齐方式",
+            "type": "string",
+            "enum": [
+                "left",
+                "middle",
+                "right"
+            ],
+            "default": "left"
+        },
+        "visible": {
+            "description": "按钮组件的可见状态",
+            "type": "boolean",
+            "default": true
+        },
+        "onClick": {
+            "description": "按钮组件的点击事件",
+            "type": "sting",
+            "default": ""
+        }        
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

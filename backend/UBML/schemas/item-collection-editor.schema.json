@@ -1,0 +1,97 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/radio-group.schema.json",
+    "title": "item-collection-editor",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a item-collection-editor",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of item-collection-editor component",
+            "type": "string",
+            "default": "item-collection-editor"
+        },
+        "requiredFields": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "uniqueFields": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "dynamicMappingKeys": {
+            "type": "boolean",
+            "default": false
+        },
+        "columns": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "modalTitle": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "canEmpty": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "valueField": {
+            "description": "",
+            "type": "string",
+            "default": "value"
+        },
+        "nameField": {
+            "description": "",
+            "type": "string",
+            "default": "name"
+        },
+        "idField": {
+            "description": "",
+            "type": "string",
+            "default": "value"
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "modelValue": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "beforeSubmit": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "title": {
+            "description": "",
+            "type": "string",
+            "default": "项编辑器"
+        },
+        "modalWidth": {
+            "description": "",
+            "type": "number",
+            "default": 900
+        },
+        "modalHeight": {
+            "description": "",
+            "type": "number",
+            "default": 600
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ],
+    "ignore": []
+}

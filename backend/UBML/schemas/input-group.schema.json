@@ -1,0 +1,244 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/input-group.schema.json",
+    "title": "input-group",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Input Group",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Input Group component",
+            "type": "string",
+            "default": "input-group"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "formatValidation": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "enableLinkLabel": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "label": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "labelWidth": {
+            "description": "",
+            "type": "number"
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "disabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },   
+        "tabIndex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "maxLength": {
+            "description": "",
+            "type": "number",
+            "default": ""
+        },
+        "textAlign": {
+            "description": "",
+            "type": "enum",
+            "enum": [
+                "left",
+                "middle",
+                "right"
+            ],
+            "default": "left"
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "onBlur": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onClickLinkLabel": {
+            "description": "",
+            "type": "sting",
+            "default": ""
+        },
+        "addonDisabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "addonContent": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "autoHeight": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "enableAddon": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "addonType": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "button",
+                "static"
+            ],
+            "default": "button"
+        },
+        "enableClear": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "enableViewPassword": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "inputType": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "input",
+                "password",
+                "text"
+            ],
+            "default": "input"
+        },
+        "maxHeight": {
+            "description": "",
+            "type": "number",
+            "default": 500
+        },
+        "popUp": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "footerButtons": {
+                    "type": "array",
+                    "default": []
+                },
+                "height": {
+                    "type": "number",
+                    "default": 600
+                },
+                "dataMapping": {
+                    "type": "object"
+                },
+                "contents": {
+                    "type": "array",
+                    "default": []
+                },
+                "showMaxButton": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "showCloseButton": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "showFooter": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "title": {
+                    "type": "string",
+                    "default": ""
+                },
+                "width": {
+                    "type": "number",
+                    "default": 800
+                }
+            }
+        },
+        "groupText": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onClickHandle": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "showButtonWhenDisabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "onClear": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "updateOn": {
+            "description": "",
+            "type": "string",
+            "default": "blur"
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ]
+}

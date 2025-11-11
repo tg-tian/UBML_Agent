@@ -1,0 +1,84 @@
+{
+    "id": "root-component",
+    "type": "component",
+    "componentType": "frame",
+    "contents": [
+        {
+            "id": "root-layout",
+            "type": "content-container",
+            "appearance": {
+                "class": "f-page f-page-card f-page-is-mainsubcard"
+            },
+            "contents": [
+                {
+                    "id": "page-header",
+                    "type": "page-header",
+                    "appearance": {
+                        "class": "f-page-header"
+                    },
+                    "icon": "f-icon f-icon-page-title-record",
+                    "title": "添加计划卡片"
+                },
+                {
+                    "id": "main-container",
+                    "type": "content-container",
+                    "appearance": {
+                        "class": "f-page-main"
+                    },
+                    "contents": [
+                        {
+                            "id": "like-card-container",
+                            "type": "content-container",
+                            "appearance": {
+                                "class": "f-struct-like-card"
+                            },
+                            "contents": [
+                                {
+                                    "id": "basic-form-component",
+                                    "type": "component",
+                                    "componentType": "form-col-4",
+                                    "appearance": {
+                                        "class": "f-struct-wrapper"
+                                    },
+                                    "contents": [
+                                        {
+                                            "id": "basic-form-section",
+                                            "type": "section",
+                                            "appearance": {
+                                                "class": "f-section-form f-section-in-mainsubcard"
+                                            },
+                                            "mainTitle": "基本信息",
+                                            "contents": [
+                                                {
+                                                    "id": "basic-form-layout",
+                                                    "type": "response-form",
+                                                    "appearance": {
+                                                        "class": "f-form-layout farris-form farris-form-controls-inline"
+                                                    },
+                                                    "contents": [
+                                                        {
+                                                            "id": "blue-button",
+                                                            "type": "button",
+                                                            "appearance": {
+                                                                "class": "f-btn f-btn-primary",
+                                                                "style": "background-color: #007bff; color: white; border: 1px solid #007bff;"
+                                                            },
+                                                            "text": "蓝色按钮",
+                                                            "textAlign": "middle",
+                                                            "visible": true,
+                                                            "disable": false
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

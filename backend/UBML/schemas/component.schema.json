@@ -1,0 +1,64 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/component.schema.json",
+    "title": "component",
+    "description": "A Farris Visual Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a component",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of component",
+            "type": "string",
+            "default": "component"
+        },
+        "componentType": {
+            "description": "The type string of component",
+            "type": "string"
+        },
+        "viewModel": {
+            "description": "The viewModel string of component",
+            "type": "string"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "onInit": {
+            "description": "初始化事件",
+            "type": "string",
+            "default": ""
+        },
+        "onAfterViewInit": {
+            "description": "视图初始化后事件",
+            "type": "string",
+            "default": ""
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

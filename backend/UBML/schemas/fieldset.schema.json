@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/fieldset.schema.json",
+    "title": "fieldset",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a fieldset",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of fieldset component",
+            "type": "string",
+            "default": "fieldset"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "title": {
+            "description": "The title for a fieldset",
+            "type": "string"
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/drawer.schema.json",
+    "title": "drawer",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for drawer",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of drawer",
+            "type": "string",
+            "default": "drawer"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "title": {
+            "description": "",
+            "type": "string",
+            "default": "标题"
+        },
+        "position": {
+            "description": "",
+            "type": "string",
+            "default": "right"
+        },
+        "width": {
+            "description": "",
+            "type": "number"
+        },
+        "showMask": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "toolbar": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "appearance": {
+                    "description": "",
+                    "type": "object",
+                    "properties": {
+                        "class": {
+                            "type": "string",
+                            "default":"col-3"
+                        }
+                    }
+                },
+                "id": {
+                    "description": "",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "",
+                    "type": "string",
+                    "default": "response-toolbar"
+                },
+                "alignment": {
+                    "description": "The alignment of Response Toolbar Button.",
+                    "type": "string",
+                    "default": "right"
+                },
+                "buttons": {
+                    "description": "The items of Response Toolbar.",
+                    "type": "array",
+                    "default": []
+                }
+            }
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

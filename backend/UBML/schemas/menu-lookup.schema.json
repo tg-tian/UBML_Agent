@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/menu-lookup.schema.json",
+    "title": "menu-lookup",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "type": {
+            "description": "The type string of menu-lookup",
+            "type": "string",
+            "default": "menu-lookup"
+        },
+        "targetType": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "menu",
+                "app"
+            ],
+            "default": "menu"
+        },
+        "fetchNodeApi": {
+            "description": "",
+            "type": "function"
+        }
+    },
+    "required": [
+        "type",
+        "fetchNodeApi"
+    ],
+    "ignore": []
+}

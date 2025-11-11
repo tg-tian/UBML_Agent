@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/response-layout-editor-setting.schema.json",
+    "title": "response-layout-editor-setting",
+    "description": "A Farris Data Collection Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for response layout editor",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of response layout editor component",
+            "type": "string",
+            "default": "response-layout-editor-setting"
+        },
+        "initialState": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "height": {
+            "description": "",
+            "type": "number",
+            "default": 0
+        },
+        "width": {
+            "description": "",
+            "type": "number",
+            "default": 0
+        },
+        "beforeOpen":{
+            "description": "",
+            "type": "function"
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/form-group.schema.json",
+    "title": "form-group",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a form group",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of form group component",
+            "type": "string",
+            "default": "form-group"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "enableLinkLabel": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "editor": {
+            "description": "",
+            "type": "obejct",
+            "default": null
+        },
+        "label": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "lableWidth": {
+            "description": "",
+            "type": "number"
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "visible":{
+            "description": "",
+            "type": "boolean",
+            "default": true  
+        },
+        "errors":{
+            "description": "",
+            "type": "object",
+            "default": null
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "editor"
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/section-toolbar-item.schema.json",
+    "title": "section-toolbar-item",
+    "description": "A Farris Toolbar Item Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Response Toolbar",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Response Toolbar",
+            "type": "string",
+            "default": "section-toolbar-item"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "text": {
+            "description": "按钮",
+            "type": "string",
+            "default": "按钮"
+        },
+        "icon": {
+            "description": "图标",
+            "type": "string",
+            "default": ""
+        },
+        "disabled": {
+            "description": "禁用",
+            "type": "boolean",
+            "default": false
+        },
+        "onClick": {
+            "description": "点击事件",
+            "type": "string",
+            "default": ""
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "text"
+    ]
+}

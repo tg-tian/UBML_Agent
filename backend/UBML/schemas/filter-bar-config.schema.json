@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/filter-bar-config.schema.json",
+    "title": "filter-bar-config",
+    "description": "A Farris Container Component",
+    "properties": {
+        "fields": {
+            "description": "The unique identifier for a query solution",
+            "type": "array"
+        }
+
+    }
+}

@@ -1,0 +1,143 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/data-grid-column.schema.json",
+    "title": "tree-grid-column",
+    "description": "A Farris data-grid-column Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a data-grid-column",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of data-grid-column component",
+            "type": "string",
+            "default": "tree-grid-column"
+        },
+        "allowGrouping": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "colspan": {
+            "description": "",
+            "type": "number"
+        },
+        "dataType": {
+            "type": "string"
+        },
+        "editor": {
+            "description": "",
+            "type": "obejct"
+        },
+        "field": {
+            "description": "",
+            "type": "string"
+        },
+        "filterable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "fixed": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "left",
+                "right"
+            ]
+        },
+        "align": {
+            "description": "",
+            "type": "enum",
+            "default": "left",
+            "enum": [
+                "left",
+                "center",
+                "right"
+            ]
+        },
+        "halign": {
+            "description": "",
+            "type": "enum",
+            "default": "left",
+            "enum": [
+                "left",
+                "center",
+                "right"
+            ]
+        },
+        "title": {
+            "description": "",
+            "type": "string"
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "resizable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "rowspan": {
+            "description": "",
+            "type": "number"
+        },
+        "showTips": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "sort": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc",
+                "none"
+            ]
+        },
+        "sortable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "sortOrder": {
+            "description": "",
+            "type": "number"
+        },
+        "tipMode": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "allways",
+                "auto"
+            ]
+        },
+        "valign": {
+            "description": "",
+            "type": "enum",
+            "default": "middle",
+            "enum": [
+                "top",
+                "middle",
+                "bottom"
+            ]
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "width": {
+            "description": "",
+            "type": "number"
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

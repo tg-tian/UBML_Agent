@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/list-nav.schema.json",
+    "title": "list-nav",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a list-nav",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of list-nav component",
+            "type": "string",
+            "default": "list-nav"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "size": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "width": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "number"
+                }
+            },
+            "default": null
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

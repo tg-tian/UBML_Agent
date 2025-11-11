@@ -1,0 +1,206 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/button-edit.schema.json",
+    "title": "button-edit",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Input Group",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Input Group component",
+            "type": "string",
+            "default": "button-edit"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disable": {
+            "type": "string",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "enableLinkLabel": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "label": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "lableWidth": {
+            "description": "",
+            "type": "number"
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "forcePlaceholder": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "require": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "textAlign": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "left",
+                "middle",
+                "right"
+            ],
+            "default": "left"
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "onBlur": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onClickLinkLabel": {
+            "description": "",
+            "type": "sting",
+            "default": ""
+        },
+        "autoComplete": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "buttonContent": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "enableClear": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "inputType": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "text",
+                "tag"
+            ],
+            "default": "text"
+        },
+        "multiSelect": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "popup": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "footerButtons": {
+                    "type": "array",
+                    "default": []
+                },
+                "height": {
+                    "type": "number",
+                    "default": 600
+                },
+                "dataMapping": {
+                    "type": "object"
+                },
+                "contents": {
+                    "type": "array",
+                    "default": []
+                },
+                "showMaxButton": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "showCloseButton": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "showFooter": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "title": {
+                    "type": "string",
+                    "default": ""
+                },
+                "width": {
+                    "type": "number",
+                    "default": 800
+                }
+            }
+        },
+        "popupClass":{
+            "description": "",
+            "type": "sting",
+            "default": ""
+        },
+        "separator": {
+            "type": "string",
+            "default": ","
+        },
+        "showButtonWhenDisabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "wrapText": {
+            "type": "boolean",
+            "default": false
+        },
+        "onClear": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

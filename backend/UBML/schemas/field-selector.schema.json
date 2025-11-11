@@ -1,0 +1,99 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/field-selector.schema.json",
+    "title": "field-selector",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "disabled": {
+            "description": "",
+            "type": "boolean",
+            "default": "false"
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": "false"
+        },
+        "modelValue": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "data": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "idField": {
+            "description": "",
+            "type": "string",
+            "default": "id"
+        },
+        "columns": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "title": {
+            "description": "",
+            "type": "string",
+            "default": "字段选择器"
+        },
+        "modalWidth": {
+            "description": "",
+            "type": "number",
+            "default": 800
+        },
+        "modalHeight": {
+            "description": "",
+            "type": "number",
+            "default": 600
+        },
+        "multiSelect": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "separator": {
+            "description": "",
+            "type": "string",
+            "default": ","
+        },
+        "bindingData": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "textField": {
+            "description": "",
+            "type": "string",
+            "default": "code"
+        },
+        "beforeOpenDialog": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "editorParams": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "onSubmitModal": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "onFieldSelected": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "repositoryToken": {
+            "description": "",
+            "type": "object",
+            "default": null
+        }
+    }
+}

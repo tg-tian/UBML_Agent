@@ -1,0 +1,31 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/configuration-parameter-editor.schema.json",
+    "title": "configuration-parameter-editor",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "type": {
+            "description": "The type string of configuration-parameter-editor",
+            "type": "string",
+            "default": "configuration-parameter-editor"
+        },
+        "parameterDescriptors": {
+            "description": "Description of parameters to be configured",
+            "type": "array",
+            "default": []
+        },
+        "formContextData": {
+            "description": "Form context data",
+            "type": "object",
+            "default": {}
+        },
+        "beforeOpen": {
+            "description": "Before opening the configuration dialog, the callback function is executed",
+            "type": "function",
+            "default": null
+        }
+    },
+    "required": [],
+    "ignore": []
+}

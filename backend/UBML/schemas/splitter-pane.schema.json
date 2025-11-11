@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/splitter-pane.schema.json",
+    "title": "splitter-pane",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a splitter",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of splitter component",
+            "type": "string",
+            "default": "splitter-pane"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "size": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "width": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "strnumbering"
+                }
+            },
+            "default": {}
+        },
+        "collapsable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "minHeight": {
+            "description": "",
+            "type": "number"
+        },        
+        "minWidth": {
+            "description": "",
+            "type": "number"
+        },
+        "position": {
+            "description": "",
+            "type": "string",
+            "default": "left",
+            "enum": [
+                "left",
+                "center",
+                "right",
+                "top",
+                "bottom"
+            ]
+        },
+        "resizable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "visible": {
+            "description": "",
+            "type": "number",
+            "default": true
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

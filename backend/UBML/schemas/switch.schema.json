@@ -1,0 +1,91 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/switch.schema.json",
+    "title": "switch",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a switch",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of switch component",
+            "type": "string",
+            "default":"switch"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "onBackground": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "offBackground": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onColor": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "offColor": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onLabel": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "offLabel": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "size": {
+            "description": "",
+            "type": "enum",
+            "default": "medium"
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore":[
+        "id","appearance","binding"
+    ]
+}

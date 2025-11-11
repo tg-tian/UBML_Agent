@@ -1,0 +1,74 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/list-view.schema.json",
+    "title": "list-view",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for list-view",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of list-view",
+            "type": "string",
+            "default": "list-view"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disable": {
+            "type": "string",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "require": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

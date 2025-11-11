@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/response-toolbar.schema.json",
+    "title": "response-toolbar",
+    "description": "A Farris Toolbar Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Response Toolbar",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Response Toolbar",
+            "type": "string",
+            "default": "response-toolbar"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "alignment": {
+            "description": "The alignment of Response Toolbar Button.",
+            "type": "string",
+            "default": "right"
+        },
+        "buttons": {
+            "description": "The items of Response Toolbar.",
+            "type": "array",
+            "default": []
+        },
+        "buttonSize": {
+            "type": "string",
+            "default": ""
+        },
+        "visible":{
+            "description": "",
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "buttons"
+    ]
+}

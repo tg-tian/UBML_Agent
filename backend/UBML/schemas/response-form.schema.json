@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/response-form.schema.json",
+    "title": "response-form",
+    "description": "A Farris Data Collection Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a form group",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of form group component",
+            "type": "string",
+            "default": "response-form"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "labelAutoOverflow": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

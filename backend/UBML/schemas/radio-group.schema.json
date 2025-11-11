@@ -1,0 +1,98 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/radio-group.schema.json",
+    "title": "radio-group",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a radio-group",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of radio-group component",
+            "type": "string",
+            "default": "radio-group"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "textField": {
+            "description": "",
+            "type": "string",
+            "default": "name"
+        },
+        "valueField": {
+            "description": "",
+            "type": "string",
+            "default": "value"
+        },
+        "dataSourceType": {
+            "description": "",
+            "type": "string",
+            "default": "static"
+        },
+        "data": {
+            "description": "",
+            "type": "array"
+        },
+        "bindDataSource": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "direction": {
+            "description": "",
+            "type": "string",
+            "default": "horizontal"
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ]
+}

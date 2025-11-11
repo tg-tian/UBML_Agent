@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/html-template.schema.json",
+    "title": "html-template",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a html-template",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of html-template",
+            "type": "string",
+            "default": "html-template"
+        },
+        "html": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "renderFunction": {
+            "description": "",
+            "type": "function",
+            "default": null
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ],
+    "ignore": []
+}

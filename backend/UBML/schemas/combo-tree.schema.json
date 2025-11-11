@@ -1,0 +1,136 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/combo-list.schema.json",
+    "title": "combo-tree",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a combo list",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of number combo list component",
+            "type": "string",
+            "default": "combo-tree"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "enableLinkLabel": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "label": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "lableWidth": {
+            "description": "",
+            "type": "number"
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "valueField": {
+            "description": "",
+            "type": "string",
+            "default": "id"
+        },
+        "titleField": {
+            "description": "",
+            "type": "string",
+            "default": "name"
+        },
+        "textField": {
+            "description": "",
+            "type": "string",
+            "default": "name"
+        },
+        "data":{
+            "description": "",
+            "type": "array"
+        },        
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "textAlign": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "left",
+                "middle",
+                "right"
+            ],
+            "default": "left"
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "onBlur": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onClickLinkLabel": {
+            "description": "",
+            "type": "sting",
+            "default": ""
+        },
+        "formatter": {
+            "type": "object",
+            "default": null
+        },
+        "customRowStatus": {
+            "type": "object",
+            "default": null
+        },
+        "minPanelWidth": {
+            "description": "",
+            "type": "number",
+            "default": 160
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

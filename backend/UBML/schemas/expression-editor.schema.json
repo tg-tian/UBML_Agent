@@ -1,0 +1,104 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/expression-editor.schema.json",
+    "title": "expression-editor",
+    "description": "A Farris Expression Editor Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Expression Editor",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Expression Editor component",
+            "type": "string",
+            "default": "expression-editor"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "beforeOpen": {
+            "type": "object",
+            "default": null
+        },
+        "modelValue": {
+            "description": "The value of Expression Editor",
+            "type": "string",
+            "default": ""
+        },
+        "variables": {
+            "description": "The variables of Expression Editor",
+            "type": "array",
+            "default": []
+        },
+        "entities": {
+            "description": "The entities of Expression Editor",
+            "type": "array",
+            "default": []
+        },
+        "onSubmitModal": {
+            "description": "The event of Expression Editor",
+            "type": "function",
+            "default": null
+        },
+        "onExpressionChanged": {
+            "description": "The event of Expression Editor",
+            "type": "function",
+            "default": null
+        },
+        "esprimaPath": {
+            "description": "The path of esprima",
+            "type": "string",
+            "default": "assets/esprima-config.json"
+        },
+        "singleExpand": {
+            "description": "The singleExpand of Expression Editor",
+            "type": "boolean",
+            "default": true
+        },
+        "showMessage": {
+            "description": "The showMessage of Expression Editor",
+            "type": "boolean",
+            "default": false
+        },
+        "dialogTitle": {
+            "description": "The dialogTitle of Expression Editor",
+            "type": "string",
+            "default": "表达式编辑器"
+        },
+        "dialogWidth": {
+            "description": "The dialogWidth of Expression Editor",
+            "type": "string",
+            "default": 975
+        },
+        "dialogHeight": {
+            "description": "The dialogHeight of Expression Editor",
+            "type": "string",
+            "default": 600
+        },
+        "beforeSubmit": {
+            "description": "The beforeSubmit of Expression Editor",
+            "type": "function",
+            "default": null
+        },
+        "showMessageType": {
+            "description": "The showMessageType of Expression Editor",
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

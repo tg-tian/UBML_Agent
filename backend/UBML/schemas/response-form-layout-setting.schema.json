@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/grid-field-editor.schema.json",
+    "title": "response-form-layout-setting",
+    "description": "A Farris Data Grid Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Input Group",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Input Group component",
+            "type": "string",
+            "default":"response-form-layout-setting"
+        },
+        "initialState": {
+            "description": "",
+            "type": "object"
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

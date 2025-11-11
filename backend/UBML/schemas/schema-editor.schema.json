@@ -1,0 +1,91 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/schema-editor.schema.json",
+    "title": "schema-editor",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "title": {
+            "description": "",
+            "type": "string",
+            "default": "选择数据源"
+        },
+        "textField": {
+            "description": "",
+            "type": "string",
+            "default": "name"
+        },
+        "viewOptions": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "beforeOpenDialog": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "repositoryToken": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "onSchemaSelected": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "editorParams": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "onSubmitModal": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "disabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "modelValue": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "displayFormatter": {
+            "description": "",
+            "type": "object",
+            "default": null
+        },
+        "modalHeight": {
+            "description": "",
+            "type": "number",
+            "default": 600
+        },
+        "modalWidth": {
+            "description": "",
+            "type": "number",
+            "default": 800
+        },
+        "requiredTip": {
+            "description": "",
+            "type": "string",
+            "default": "请选择数据源"
+        },
+        "validateFunction": {
+            "description": "",
+            "type": "object",
+            "default": null
+        }
+    },
+    "required": [],
+    "ignore": []
+}

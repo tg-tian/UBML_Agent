@@ -1,0 +1,57 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/code-editor.schema.json",
+    "title": "code-editor",
+    "description": "A Farris Code Editor Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Code Editor",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Code Editor component",
+            "type": "string",
+            "default": "code-editor"
+        },
+        "language": {
+            "description": "",
+            "type": "string",
+            "default": "json"
+        },
+        "theme": {
+            "description": "",
+            "type": "string",
+            "default": "vs-dark"
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "monacoEditorOptions": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "configPath": {
+            "description": "",
+            "type": "string",
+            "default": "assets/monaco-editor.config.json"
+        },
+        "modalTitle": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onSubmitModal": {
+            "description": "",
+            "type": "function",
+            "default": null
+        }
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

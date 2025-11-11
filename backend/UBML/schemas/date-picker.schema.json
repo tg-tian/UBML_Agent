@@ -1,0 +1,102 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/date-picker.schema.json",
+    "title": "date-picker",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for date picker",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of date picker",
+            "type": "string",
+            "default": "date-picker"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disabled": {
+            "type": "string",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": "请选择日期"
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "displayFormat": {
+            "description": "",
+            "type": "enum",
+            "default": "yyyy-MM-dd"
+        },
+        "valueFormat": {
+            "description": "",
+            "type": "enum",
+            "default": "yyyy-MM-dd"
+        },
+        "maxDate": {
+            "description": "",
+            "type": "string"
+        },
+        "minDate": {
+            "description": "",
+            "type": "string"
+        },
+        "showTime": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ]
+}

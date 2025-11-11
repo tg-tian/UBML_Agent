@@ -1,0 +1,646 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/dragging-rules.schema.json",
+    "title": "Dragging Rules",
+    "description": "The rules of designer canvas",
+    "type": "object",
+    "properties": {
+        "f-page": {
+            "description": "The root class of page designed by farris.",
+            "type": "object",
+            "properties": {
+                "contents": {
+                    "type": "object",
+                    "properties": {
+                        "f-page-header": {
+                            "description": "The class of page header designed by farris.",
+                            "type": "string"
+                        },
+                        "f-page-main": {
+                            "description": "The class of page body designed by farris.",
+                            "type": "object",
+                            "properties": {
+                                "contents": {
+                                    "type": "object",
+                                    "properties": {
+                                        "f-struct-like-card": {
+                                            "description": "",
+                                            "type": "object",
+                                            "properties": {
+                                                "contents": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "f-struct-form": {
+                                                            "description": "The class of form component which has a hierarchical structure of component -> section -> respnse-form.",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "contents": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "f-section-form": {
+                                                                            "description": "The class of section which has wrapped a reponse-form component.",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "contents": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "f-form-layout": {
+                                                                                            "description": "The class of reponse form",
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                                "rules": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                        "canAccept": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        },
+                                                                                                        "fixed": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        },
+                                                                                                        "hidePadding": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": false
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "rules": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "canAccept": {
+                                                                                            "type": "boolean",
+                                                                                            "const": false
+                                                                                        },
+                                                                                        "fixed": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        },
+                                                                                        "hidePadding": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "rules": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "canAccept": {
+                                                                            "type": "boolean",
+                                                                            "const": false
+                                                                        },
+                                                                        "fixed": {
+                                                                            "type": "boolean",
+                                                                            "const": false
+                                                                        },
+                                                                        "hidePadding": {
+                                                                            "type": "boolean",
+                                                                            "const": true
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "f-struct-wrapper": {
+                                                            "description": "",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "contents": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "f-section-tabs": {
+                                                                            "description": "The class of section which has wrapped sub-grid tabs.",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "contents": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "f-tabs-in-card": {
+                                                                                            "description": "The class of tabs which contains sub-grid.",
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                                "contents": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                        "f-struct-data-grid-in-card": {
+                                                                                                            "description": "The class of sub-grid component",
+                                                                                                            "type": "object",
+                                                                                                            "properties": {
+                                                                                                                "contents": {
+                                                                                                                    "type": "object",
+                                                                                                                    "properties": {
+                                                                                                                        "f-grid-is-sub": {
+                                                                                                                            "description": "The class of sub-grid",
+                                                                                                                            "type": "object",
+                                                                                                                            "properties": {
+                                                                                                                                "rules": {
+                                                                                                                                    "type": "object",
+                                                                                                                                    "properties": {
+                                                                                                                                        "canAccept": {
+                                                                                                                                            "type": "boolean",
+                                                                                                                                            "const": true
+                                                                                                                                        },
+                                                                                                                                        "fixed": {
+                                                                                                                                            "type": "boolean",
+                                                                                                                                            "const": true
+                                                                                                                                        },
+                                                                                                                                        "hidePadding": {
+                                                                                                                                            "type": "boolean",
+                                                                                                                                            "const": false
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                },
+                                                                                                                "rules": {
+                                                                                                                    "type": "object",
+                                                                                                                    "properties": {
+                                                                                                                        "canAccept": {
+                                                                                                                            "type": "boolean",
+                                                                                                                            "const": false
+                                                                                                                        },
+                                                                                                                        "fixed": {
+                                                                                                                            "type": "boolean",
+                                                                                                                            "const": false
+                                                                                                                        },
+                                                                                                                        "hidePadding": {
+                                                                                                                            "type": "boolean",
+                                                                                                                            "const": true
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                "rules": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                        "canAccept": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": false
+                                                                                                        },
+                                                                                                        "fixed": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        },
+                                                                                                        "hidePadding": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "rules": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "canAccept": {
+                                                                                            "type": "boolean",
+                                                                                            "const": false
+                                                                                        },
+                                                                                        "fixed": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        },
+                                                                                        "hidePadding": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "f-section-in-main": {
+                                                                            "description": "The class of section which has wrapped a reponse-form component.",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "rules": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "canAccept": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        },
+                                                                                        "fixed": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        },
+                                                                                        "hidePadding": {
+                                                                                            "type": "boolean",
+                                                                                            "const": false
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "rules": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "canAccept": {
+                                                                            "type": "boolean",
+                                                                            "const": false
+                                                                        },
+                                                                        "fixed": {
+                                                                            "type": "boolean",
+                                                                            "const": false
+                                                                        },
+                                                                        "hidePadding": {
+                                                                            "type": "boolean",
+                                                                            "const": true
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "rules": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "canAccept": {
+                                                            "type": "boolean",
+                                                            "const": true
+                                                        },
+                                                        "fixed": {
+                                                            "type": "boolean",
+                                                            "const": true
+                                                        },
+                                                        "hidePadding": {
+                                                            "type": "object",
+                                                            "const": {
+                                                                "allOf": [
+                                                                    {
+                                                                        "sibling": 0,
+                                                                        "parent": {
+                                                                            "f-page-main": true
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f-struct-data-grid": {
+                                            "description": "",
+                                            "type": "object",
+                                            "properties": {
+                                                "rules": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "canAccept": {
+                                                            "type": "object",
+                                                            "const": true
+                                                        },
+                                                        "fixed": {
+                                                            "type": "boolean",
+                                                            "const": true
+                                                        },
+                                                        "hidePadding": {
+                                                            "type": "boolean",
+                                                            "const": true
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f-page-main-content": {
+                                            "description": "",
+                                            "type": "object",
+                                            "properties": {
+                                                "contents": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "f-page-content-nav": {
+                                                            "description": "",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "contents": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "f-struct-data-grid-in-nav": {
+                                                                            "description": "",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "contents": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "f-page-content-nav-extend": {
+                                                                                            "description": "",
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        "f-section-in-nav": {
+                                                                                            "description": "",
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                                "rules": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                        "canAccept": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": false
+                                                                                                        },
+                                                                                                        "fixed": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        },
+                                                                                                        "hidePadding": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": false
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "rules": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "canAccept": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        },
+                                                                                        "fixed": {
+                                                                                            "type": "boolean",
+                                                                                            "const": false
+                                                                                        },
+                                                                                        "hidePadding": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "f-page-content-main": {
+                                                            "description": "",
+                                                            "type": "object",
+                                                            "properties": {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f-page-content": {
+                                            "description": "",
+                                            "type": "object",
+                                            "properties": {
+                                                "contents": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "f-page-content-nav": {
+                                                            "description": "",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "contents": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "f-list-nav": {
+                                                                            "description": "",
+                                                                            "type": "object"
+                                                                        },
+                                                                        "f-list-nav-left": {
+                                                                            "description": "",
+                                                                            "type": "object"
+                                                                        },
+                                                                        "f-struct-data-grid-in-nav": {
+                                                                            "description": "",
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                                "contents": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "f-section-form": {
+                                                                                            "description": "",
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                                "rules": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                        "canAccept": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": false
+                                                                                                        },
+                                                                                                        "fixed": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        },
+                                                                                                        "hidePadding": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        },
+                                                                                        "f-section-grid": {
+                                                                                            "description": "",
+                                                                                            "type": "object",
+                                                                                            "properties": {
+                                                                                                "rules": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                        "canAccept": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": false
+                                                                                                        },
+                                                                                                        "fixed": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        },
+                                                                                                        "hidePadding": {
+                                                                                                            "type": "boolean",
+                                                                                                            "const": true
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "rules": {
+                                                                                    "type": "object",
+                                                                                    "properties": {
+                                                                                        "canAccept": {
+                                                                                            "type": "boolean",
+                                                                                            "const": false
+                                                                                        },
+                                                                                        "fixed": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        },
+                                                                                        "hidePadding": {
+                                                                                            "type": "boolean",
+                                                                                            "const": true
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "rules": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "canAccept": {
+                                                                        "type": "boolean",
+                                                                        "const": false
+                                                                    },
+                                                                    "fixed": {
+                                                                        "type": "boolean",
+                                                                        "const": true
+                                                                    },
+                                                                    "hidePadding": {
+                                                                        "type": "boolean",
+                                                                        "const": true
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "f-page-content-main": {
+                                                            "description": "",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "rules": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "canAccept": {
+                                                                            "type": "boolean",
+                                                                            "const": false
+                                                                        },
+                                                                        "fixed": {
+                                                                            "type": "boolean",
+                                                                            "const": false
+                                                                        },
+                                                                        "hidePadding": {
+                                                                            "type": "boolean",
+                                                                            "const": true
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "rules": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "canAccept": {
+                                                            "type": "boolean",
+                                                            "const": false
+                                                        },
+                                                        "fixed": {
+                                                            "type": "boolean",
+                                                            "const": true
+                                                        },
+                                                        "hidePadding": {
+                                                            "type": "boolean",
+                                                            "const": true
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "rules": {
+                                    "type": "object",
+                                    "properties": {
+                                        "canAccept": {
+                                            "type": "object",
+                                            "const": {
+                                                "anyOf": [
+                                                    {
+                                                        "children": 0
+                                                    },
+                                                    {
+                                                        "children": {
+                                                            "length": {
+                                                                "not": 1
+                                                            },
+                                                            "f-struct-like-card": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "children": {
+                                                            "scroll-spy": false,
+                                                            "f-page-content": false,
+                                                            "f-struct-like-card": false
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "fixed": {
+                                            "type": "boolean",
+                                            "const": true
+                                        },
+                                        "hidePadding": {
+                                            "type": "boolean",
+                                            "const": true
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "f-page-footer": {
+                            "description": "The class of page footer designed by farris.",
+                            "type": "string"
+                        }
+                    }
+                },
+                "rules": {
+                    "type": "object",
+                    "properties": {
+                        "canAccept": {
+                            "type": "boolean",
+                            "const": false
+                        },
+                        "fixed": {
+                            "type": "boolean",
+                            "const": true
+                        },
+                        "hidePadding": {
+                            "type": "boolean",
+                            "const": true
+                        }
+                    }
+                }
+            }
+        },
+        "f-page-is-managelist": {
+            "description": "The root class of mangement list page.",
+            "type": "string"
+        },
+        "f-page-card": {
+            "description": "",
+            "type": "object"
+        },
+        "f-page-is-mainsubcard": {
+            "description": "",
+            "type": "object"
+        }
+    }
+}

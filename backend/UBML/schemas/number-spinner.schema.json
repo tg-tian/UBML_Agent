@@ -1,0 +1,138 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/number-spinner.schema.json",
+    "title": "number-spinner",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a number spinner",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of number spinner component",
+            "type": "string",
+            "default": "number-spinner"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": "请输入数字"
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "disabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },        
+        "precision": {
+            "description": "",
+            "type": "number",
+            "default": 0
+        },
+        "min":{
+            "description": "",
+            "type": "number"
+        },
+        "step":{
+            "description": "",
+            "type": "number",
+            "default": 1
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "textAlign": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "left",
+                "middle",
+                "right"
+            ],
+            "default": "left"
+        },
+        "nullable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "max":{
+            "description": "",
+            "type": "number"
+        },
+        "onBlur": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onClickLinkLabel": {
+            "description": "",
+            "type": "sting",
+            "default": ""
+        },
+        "showZero":{
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "useThousands": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "keyboard":{
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "bigNumber":{
+            "description": "",
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ]
+}

@@ -1,0 +1,786 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/tree-grid.schema.json",
+    "title": "tree-grid",
+    "description": "A Farris Data Grid Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Input Group",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Input Group component",
+            "type": "string",
+            "default":"tree-grid"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "fit": {
+            "type": "boolean",
+            "default": false
+        },
+        "showStripe": {
+            "type": "boolean",
+            "default": true
+        },
+        "showBorder": {
+            "type": "boolean",
+            "default": false
+        },
+        "showTreeNodeIcons":{
+            "type": "boolean",
+            "default": false
+        },
+        "showSetting":{
+            "type": "boolean",
+            "default": false
+        },
+        "size": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "width": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "number"
+                }
+            },
+            "default": null
+        },
+        "dataSource": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "columns": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "identifyField": {
+            "description": "",
+            "type": "string"
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "disabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "cell": {
+            "type": "object",
+            "properties": {
+                "highlightFocusingCell": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "mergeCell": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "showEditableIcon": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "column": {
+            "type": "object",
+            "properties": {
+                "fitColumns": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "fitMode": {
+                    "description": "",
+                    "type": "string",
+                    "default": "average"
+                },
+                "groups": {
+                    "description": "",
+                    "type": "array",
+                    "default": []
+                },
+                "reorderColumn": {
+                    "description": "Enable to drag column to reorder",
+                    "type": "boolean",
+                    "default": false
+                },
+                "resizeColumn": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "resizeColumnOnDoubleClick": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "command": {
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "commands": {
+                    "type": "array",
+                    "default": []
+                },
+                "commandColumnWidth": {
+                    "description": "",
+                    "type": "number",
+                    "default": 120
+                },
+                "onClickDeleteCommand": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onClickEditCommand": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "contextMenu": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "customizaiton": {
+            "type": "object",
+            "properties": {
+                "enableScheme": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "enableSetting": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "edit": {
+            "type": "obejct",
+            "properties": {
+                "mode": {
+                    "description": "",
+                    "type": "string",
+                    "default": "cell",
+                    "enum": [
+                        "cell",
+                        "row",
+                        "card"
+                    ]
+                },
+                "selectOnEditing": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "onAppendRow": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onBeforeEdit": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "filter": {
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "filterStyle": {
+                    "description": "",
+                    "type": "string",
+                    "default": "filter-column",
+                    "enum": [
+                        "filter-column",
+                        "filter-row"
+                    ]
+                },
+                "mode": {
+                    "description": "",
+                    "type": "string",
+                    "default": "server",
+                    "enum": [
+                        "client",
+                        "server"
+                    ]
+                },
+                "showSummary": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "onFilterChange": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "footer": {
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "customFooterStyle": {
+                    "description": "",
+                    "type": "object"
+                },
+                "footerDataCommand": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "footerDataFrom": {
+                    "description": "",
+                    "type": "string",
+                    "default": "client"
+                },
+                "footerHeight": {
+                    "description": "",
+                    "type": "number",
+                    "default": 29
+                },
+                "footerPosition": {
+                    "description": "",
+                    "type": "string",
+                    "default": "bottom"
+                },
+                "footerTemplate": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "group": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "customGroupRow": {
+                    "description": "",
+                    "type": "object"
+                },
+                "customGroupRowStyle": {
+                    "description": "",
+                    "type": "obejct"
+                },
+                "customSummaryStyle": {
+                    "description": "",
+                    "type": "obejct"
+                },
+                "groupColSpan": {
+                    "description": "",
+                    "type": "number",
+                    "default": 1
+                },
+                "groupFields": {
+                    "description": "",
+                    "type": "array",
+                    "default": []
+                },
+                "showGroupedColumn": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "showGroupPanel": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "showSummary": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "summaryPosition": {
+                    "description": "",
+                    "type": "string",
+                    "default": "separate",
+                    "enum": [
+                        "separate",
+                        "merge-to-group"
+                    ]
+                },
+                "disableGroupOnEditing": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "expandGroupRows": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "header": {
+            "type": "object",
+            "properties": {
+                "wrapHeadings": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "disablePagination": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "contentTemplate": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "index": {
+                    "description": "",
+                    "type": "number",
+                    "default": 1
+                },
+                "mode": {
+                    "description": "",
+                    "type": "string",
+                    "default": "server",
+                    "enum": [
+                        "server",
+                        "client"
+                    ]
+                },
+                "showGoto": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "showIndex": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "showLimits": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "showPageInfo": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "size": {
+                    "description": "",
+                    "type": "number",
+                    "default": 20
+                },
+                "sizeLimits": {
+                    "description": "",
+                    "type": "array",
+                    "default": [
+                        10,
+                        20,
+                        30,
+                        50,
+                        100
+                    ]
+                },
+                "onPageChange": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onPageSizeChange": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "row": {
+            "type": "object",
+            "properties": {
+                "customRowStyle": {
+                    "description": "",
+                    "type": "object"
+                },
+                "disable": {
+                    "description": "",
+                    "type": "obejct"
+                },
+                "height": {
+                    "description": "",
+                    "type": "number",
+                    "default": 30
+                },
+                "showHovering": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "wrapContent": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "rowNumber": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "heading": {
+                    "description": "",
+                    "type": "string",
+                    "default": "序号"
+                },
+                "width": {
+                    "description": "",
+                    "type": "number",
+                    "default": 36
+                },
+                "onClickRow": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onDoubleClickRow": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "selection": {
+            "type": "object",
+            "properties": {
+                "enableSelectRow": {
+                    "description": "允许选中行",
+                    "type": "boolean",
+                    "default": true
+                },
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "checkOnSelect": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "clearSelectionOnEmpty": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "customSelectionItem": {
+                    "description": "",
+                    "type": "object"
+                },
+                "focusSelection": {
+                    "description": "",
+                    "type": "string",
+                    "default": "current",
+                    "enum": [
+                        "current",
+                        "all"
+                    ]
+                },
+                "keepSelectingOnClick": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "keepSelectingOnPaging": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": true
+                },
+                "multiSelect": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "selectionMode": {
+                    "description": "",
+                    "type": "string",
+                    "default": "default"
+                },
+                "selectOnCheck": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "selectOnEditing": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "showCheckbox": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "showCheckAll": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "showSelection": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "onBeforeSelect": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onBeforeUnCheck": {
+                    "description": "",
+                    "type": "",
+                    "default": ""
+                },
+                "onBeforeUnSelect": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onCheckAll": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onChecked": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onSelectionChange": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onUnCheckAll": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onUnChecked": {
+                    "description": "",
+                    "type": "string",
+                    "default": ""
+                },
+                "onCheckedChange": {
+                    "description": "",
+                    "type": "string"
+                }
+            }
+        },
+        "sort": {
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "fields": {
+                    "description": "",
+                    "type": "array",
+                    "default": []
+                },
+                "mode": {
+                    "description": "",
+                    "type": "string",
+                    "default": "client",
+                    "enum": [
+                        "client",
+                        "server"
+                    ]
+                },
+                "multiSort": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "summary": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                },
+                "customSummaryStyle": {
+                    "description": "",
+                    "type": "object"
+                },
+                "groupFields": {
+                    "description": "",
+                    "type": "array",
+                    "default": []
+                },
+                "mode": {
+                    "description": "",
+                    "type": "string",
+                    "default": "client",
+                    "enum": [
+                        "client",
+                        "server"
+                    ]
+                },
+                "position": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": "bottom",
+                    "enum": [
+                        "bottom",
+                        "top",
+                        "both"
+                    ]
+                }
+            }
+        },
+        "toolbar": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "enable": {
+                    "description": "",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "visualization": {
+            "autoHeight": {
+                "description": "",
+                "type": "boolean",
+                "default": false
+            },
+            "emptyDataHeight": {
+                "description": "",
+                "type": "number",
+                "default": 36
+            },
+            "emptyTemplate": {
+                "description": "",
+                "type": "string",
+                "default": ""
+            },
+            "maxHeight": {
+                "description": "",
+                "type": "number",
+                "default": 300
+            },
+            "scrollBarShowMode": {
+                "description": "",
+                "type": "string",
+                "default": "auto"
+            },
+            "showBorder": {
+                "description": "",
+                "type": "boolean",
+                "default": false
+            },
+            "showScrollArrow": {
+                "description": "",
+                "type": "boolean",
+                "default": false
+            },
+            "striped": {
+                "description": "",
+                "type": "boolean",
+                "default": true
+            },
+            "useBlankWhenDataIsEmpty": {
+                "description": "",
+                "type": "boolean",
+                "default": false
+            }
+        },
+        "onSelectionChange": {
+            "description": "行切换事件",
+            "type": "string",
+            "default": ""
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "columns"
+    ]
+}

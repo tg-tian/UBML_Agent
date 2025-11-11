@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/events-editor.schema.json",
+    "title": "events-editor",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for events-editor",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type events of events-editor",
+            "type": "events",
+            "default": "events-editor"
+        },
+        "initialData": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        }        
+    },
+    "required": [
+        "id",
+        "type"
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/tabs.schema.json",
+    "title": "tabs",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a Tabs",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of Tabs component",
+            "type": "string",
+            "default": "tabs"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "autoTitleWidth":{
+            "description": "",
+            "type": "boolean",
+            "default":false
+        },
+        "titleWidth":{
+            "description": "",
+            "type": "number"
+        },
+        "titleLength":{
+            "description": "",
+            "type": "number",
+            "default":7
+        },
+        "fill":{
+            "description": "",
+            "type": "boolean",
+            "default":false
+        },
+        "visible":{
+            "description": "",
+            "type": "boolean",
+            "default":true
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

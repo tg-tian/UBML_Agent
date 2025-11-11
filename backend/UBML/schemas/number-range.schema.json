@@ -1,0 +1,99 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/number-range.schema.json",
+    "title": "number-range",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a number-range",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of number-range component",
+            "type": "string",
+            "default": "number-range"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disabled": {
+            "type": "boolean",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "precision": {
+            "description": "",
+            "type": "number",
+            "default": 0
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "beginValue": {
+            "description": "",
+            "type": "number"
+        },
+        "endValue": {
+            "description": "",
+            "type": "number"
+        },
+        "nullable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "min": {
+            "description": "",
+            "type": "string"
+        },
+        "max": {
+            "description": "",
+            "type": "string"
+        }
+    },
+    "required": [
+        "type"
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/tab-page.schema.json",
+    "title": "tab-page",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a tab-page Item",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of tab-page Item component",
+            "type": "string",
+            "default": "tab-page"
+        },
+        "contents": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "title": {
+            "description": "",
+            "type": "string",
+            "default": "标题"
+        },
+        "disabled": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "removeable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "show": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "toolbar": {
+            "description": "",
+            "type": "object"
+        },
+        "tabWidth": {
+            "description": "",
+            "type": "number"
+        },
+        "toolbarPosition": {
+            "description": "",
+            "type": "string",
+            "default": "inHead"
+        },
+        "customTitleClass": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "onTabChange":{
+            "description": "",
+            "type": "切换标签页事件",
+            "default": ""
+        },
+        "onTabRemove":{
+            "description": "",
+            "type": "string",
+            "default": "移除标签页事件"
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "contents"
+    ]
+}

@@ -1,0 +1,268 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/lookup.schema.json",
+    "title": "lookup",
+    "description": "A Farris Input Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a combo list",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of number combo list component",
+            "type": "string",
+            "default": "lookup"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "enableLinkLabel": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "label": {
+            "description": "",
+            "type": "string",
+            "default": "帮助"
+        },
+        "lableWidth": {
+            "description": "",
+            "type": "number"
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": "请选择"
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "required": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "textAlign": {
+            "description": "",
+            "type": "string",
+            "enum": [
+                "left",
+                "middle",
+                "right"
+            ],
+            "default": "left"
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "textField": {
+            "description": "帮助显示文本字段",
+            "type": "string",
+            "default": ""
+        },
+        "mappingFields": {
+            "description": "帮助字段映射",
+            "type": "object",
+            "default": {}
+        },
+        "uri": {
+            "type": "string",
+            "default": ""
+        },
+        "dataSource": {
+            "type": "object",
+            "default": null
+        },
+        "displayType": {
+            "type": "string",
+            "default": "list"
+        },
+        "onUpdate:dataMapping": {
+            "type": "object",
+            "default": null
+        },
+        "onClear": {
+            "type": "object",
+            "default": null
+        },
+        "context": {
+            "type": "object",
+            "default": null
+        },
+        "enableToSelect": {
+            "type": "boolean",
+            "default": true
+        },
+        "idValue": {
+            "type": "string",
+            "default": ""
+        },
+        "multiSelect": {
+            "type": "boolean",
+            "default": false
+        },
+        "separator": {
+            "type": "string",
+            "default": ","
+        },
+        "fitColumns": {
+            "type": "boolean",
+            "default": true
+        },
+        "enableFavorite": {
+            "type": "boolean",
+            "default": false
+        },
+        "enableUserData": {
+            "type": "boolean",
+            "default": false
+        },
+        "showSelections": {
+            "type": "boolean",
+            "default": true
+        },
+        "treeToList": {
+            "type": "boolean",
+            "default": false
+        },
+        "navTreeToList": {
+            "type": "boolean",
+            "default": false
+        },
+        "showNavigation": {
+            "type": "boolean",
+            "default": true
+        },
+        "dictPicking": {
+            "type": "object",
+            "default": null
+        },
+        "dictPicked": {
+            "type": "object",
+            "default": null
+        },
+        "enableSearchBar": {
+            "type": "boolean",
+            "default": true
+        },
+        "searchAnyField": {
+            "type": "boolean",
+            "default": true
+        },
+        "dialog": {
+            "type": "object",
+            "default": null
+        },
+        "idField": {
+            "type": "string",
+            "default": "id"
+        },
+        "pagination": {
+            "type": "object",
+            "default": null
+        },
+        "allowFreeInput": {
+            "type": "boolean",
+            "default": false
+        },
+        "loadTreeDataType": {
+            "type": "string",
+            "default": "default"
+        },
+        "onlySelectLeaf": {
+            "type": "boolean",
+            "default": "default"
+        },
+        "enableFullTree": {
+            "type": "boolean",
+            "default": true
+        },
+        "beforeLoadData": {
+            "type": "object",
+            "default": null
+        },
+        "beforeSelectData": {
+            "type": "object",
+            "default": null
+        },
+        "enableCascade": {
+            "type": "boolean",
+            "default": false
+        },
+        "showCascadeControl": {
+            "type": "boolean",
+            "default": false
+        },
+        "cascadeItems": {
+            "type": "object",
+            "default": {
+                "both": true,
+                "up": true,
+                "down": true,
+                "disable": true
+            }
+        },
+        "cascadeStatus": {
+            "type": "string",
+            "default": "both"
+        },
+        "expandLevel": {
+            "type": "number",
+            "default": 0
+        },
+        "enableClear": {
+            "type": "boolean",
+            "default": true
+        },
+        "enableTitle": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id",
+        "appearance",
+        "binding",
+        "visible"
+    ],
+    "events": {
+        "dictPicking": "帮助前事件",
+        "dictPicked": "帮助后事件",
+        "beforeSelectData": "数据选择确认前事件",
+        "beforeLoadData": "数据加载前事件"
+    }
+}

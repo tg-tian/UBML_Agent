@@ -1,0 +1,83 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/query-solution.schema.json",
+    "title": "query-solution",
+    "description": "A Farris Container Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a query solution",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of query solution component",
+            "type": "string",
+            "default": "query-solution"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "formId": {
+            "description": "",
+            "type": "string",
+            "default": true
+        },
+        "isControlInline": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "expanded": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "fields": {
+            "description": "",
+            "type": "array",
+            "default": []
+        },
+        "presetFields": {
+            "description": "",
+            "type": "array"
+        },
+        "defaultValues": {
+            "description": "",
+            "type": "array"
+        },
+        "solutions": {
+            "description": "",
+            "type": "array"
+        },
+        "presetQuerySolutionName": {
+            "description": "",
+            "type": "string",
+            "default": "默认筛选方案"
+        },
+        "filterText": {
+            "description": "",
+            "type": "string",
+            "default": "筛选"
+        },
+        "initQuery": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "changeQuery": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

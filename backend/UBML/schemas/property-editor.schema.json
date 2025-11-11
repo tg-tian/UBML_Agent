@@ -1,0 +1,121 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://farris-design.gitee.io/property-editor.schema.json",
+    "title": "property-editor",
+    "description": "A Farris Component",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for property-editor",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type string of property-editor",
+            "type": "string",
+            "default": "property-editor"
+        },
+        "appearance": {
+            "description": "",
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "string"
+                }
+            },
+            "default": {}
+        },
+        "binding": {
+            "description": "",
+            "type": "object",
+            "default": {}
+        },
+        "disable": {
+            "type": "string",
+            "default": false
+        },
+        "editable": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "placeholder": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "readonly": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "require": {
+            "description": "",
+            "type": "boolean",
+            "default": false
+        },
+        "tabindex": {
+            "description": "",
+            "type": "number",
+            "default": -1
+        },
+        "visible": {
+            "description": "",
+            "type": "boolean",
+            "default": true
+        },
+        "propertyTypes": {
+            "description": "",
+            "type": "Array",
+            "default": []
+        },
+        "constEnums": {
+            "description": "",
+            "type": "Array",
+            "default": []
+        },
+        "constType": {
+            "description": "",
+            "type": "String",
+            "default": ""
+        },
+        "variables": {
+            "description": "",
+            "type": "Array",
+            "default": []
+        },
+        "controlName": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "newVariablePrefix": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "newVariableType": {
+            "description": "",
+            "type": "string",
+            "default": ""
+        },
+        "stateMachines": {
+            "description": "",
+            "type": "Array",
+            "default": []
+        },
+        "expressionConfig": {
+            "description": "",
+            "type": "Object",
+            "default": {}
+        }   
+    },
+    "required": [
+        "type"
+    ],
+    "ignore": [
+        "id"
+    ]
+}
