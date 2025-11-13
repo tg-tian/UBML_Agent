@@ -13,6 +13,18 @@ const agent = createAgent({
 });
 
 export const ubmlAgent = async (state: typeof MessagesAnnotation.State) => {
-  const result = await agent.invoke(state);
-  return result;
+  console.log("ubmlAgent state:", state);
+  const recentMessages = (state.messages ?? []).slice(-3);
+  const tempState = {
+    ...state,
+    messages: recentMessages,
+  };
+  const result = await agent.invoke(tempState);
+  const lastMessage = result?.messages?.[result.messages.length - 1];
+  const ubmljson = lastMessage?.content?.toString?.() ?? "";
+  return {
+    ...state,
+    messages: [...(state.messages ?? []), lastMessage],
+    ubmljson,
+  };
 };

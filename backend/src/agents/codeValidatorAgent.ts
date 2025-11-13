@@ -13,6 +13,17 @@ const agent = createAgent({
 });
 
 export const codeValidatorAgent = async (state: typeof MessagesAnnotation.State) => {
-  const result = await agent.invoke(state);
-  return result;
+  console.log("codeValidatorAgent state:", state);
+  const recentMessages = (state.messages ?? []).slice(-1);
+  const tempState = {
+    ...state,
+    messages: recentMessages,
+  };
+  console.log("codeValidatorAgent tempState:", tempState);
+  const result = await agent.invoke(tempState);
+  const lastMessage = result?.messages?.[result.messages.length - 1];
+  return {
+    ...state,
+    messages: [...(state.messages ?? []), lastMessage],
+  };
 };

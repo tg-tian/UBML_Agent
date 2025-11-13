@@ -83,6 +83,9 @@ importers:
       nuqs:
         specifier: ^2.4.1
         version: 2.7.3(react-router-dom@6.30.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-router@6.30.1(react@19.2.0))(react@19.2.0)
+      pnpm:
+        specifier: ^10.22.0
+        version: 10.22.0
       react:
         specifier: ^19.0.0
         version: 19.2.0
@@ -2557,6 +2560,11 @@ packages:
   picomatch@4.0.3:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
+
+  pnpm@10.22.0:
+    resolution: {integrity: sha512-vwSe/plbKPUn/StBrgR0zikYb37cs79UUIe9Yfu+uyv3U2LRMH/aCcLSiOHkmXh6wS1Py2F6l0cYpgUfLu50HA==}
+    engines: {node: '>=18.12'}
+    hasBin: true
 
   postcss-modules-extract-imports@3.1.0:
     resolution: {integrity: sha512-k3kNe0aNFQDAZGbin48pL2VNidTF0w4/eASDsxlyspobzU3wZQLOGj7L9gfRe0Jo9/4uud09DsjFNH7winGv8Q==}
@@ -5648,6 +5656,8 @@ snapshots:
   picomatch@2.3.1: {}
 
   picomatch@4.0.3: {}
+
+  pnpm@10.22.0: {}
 
   postcss-modules-extract-imports@3.1.0(postcss@8.5.6):
     dependencies:

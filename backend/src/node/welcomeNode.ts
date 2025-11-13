@@ -7,7 +7,7 @@ export const welcomeNode = async (state: typeof MessagesAnnotation.State) => {
     content: `
 👋 你好！欢迎使用 **UBML 多智能体协同软件构造系统** 🎯  
 
-我是系统引导助手，将为你简要介绍我们的工作方式：
+本系统包含：
 
 - 🤖 **需求分析智能体**：与您沟通、提炼并完善软件需求。
 - 🧩 **UBML 智能体**：根据需求生成 UBML 模型（JSON / 图示）。
