@@ -1,18 +1,18 @@
 import { createAgent } from "langchain";
 import { DeepSeek } from "../config/modelConfig.js";
-import ubmlSystemPrompt from "../prompt/ubmlPrompt.js";
 import { MessagesAnnotation } from "@langchain/langgraph";
 import { retrieveUBML } from "../tools/retrieve_UBML.js";
 import { loadFiles } from "../tools/load_files.js";
-import { searchRelevantInfo } from "../tools/search_relevant_info.js";
+import { validate_schema } from "../tools/validate_schema.js";
+import  validateSystemPrompt from "../prompt/codeValidatorPrompt.js";
 
 const agent = createAgent({
   model: DeepSeek,
-  tools: [retrieveUBML,loadFiles,searchRelevantInfo],
-  systemPrompt: ubmlSystemPrompt,
+  tools: [retrieveUBML,loadFiles,validate_schema],
+  systemPrompt: validateSystemPrompt,
 });
 
-export const ubmlAgent = async (state: typeof MessagesAnnotation.State) => {
+export const codeValidatorAgent = async (state: typeof MessagesAnnotation.State) => {
   const result = await agent.invoke(state);
   return result;
 };

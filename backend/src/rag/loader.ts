@@ -35,7 +35,6 @@ ${jsonText}
 
     const response = await llm.invoke(prompt);
     const summary = response?.content as string;
-    console.log(content);
 
     docs.push(
       new Document({
@@ -52,4 +51,3 @@ ${jsonText}
   return docs;
 }
 
-await loadJsonComponents("./UBML");

@@ -7,7 +7,7 @@ import systemPrompt from "../prompt/requirementsPrompt.js";
 
 const agent = createAgent({
   model: DeepSeek,
-  tools: [extractKeywords, searchRelevantInfo],
+  tools: [searchRelevantInfo],
   systemPrompt,
 });
 

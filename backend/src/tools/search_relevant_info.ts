@@ -18,14 +18,14 @@ export const searchRelevantInfo = tool(
   },
   {
     name: "search_relevant_info",
-    description: "调用 Google 搜索（SerpAPI代理）获取实时信息",
+    description: "联网搜索获取实时的各种信息",
     schema: z.object({
       query: z.string().describe("要搜索的主题或问题"),
       max_results: z
         .number()
         .int()
-        .min(1)
-        .max(10)
+        .min(5)
+        .max(20)
         .optional()
         .describe("返回的最大条目数（默认 5）"),
     }),

@@ -11,6 +11,8 @@
     "@langchain/langgraph": "^1.0.1",
     "@langchain/openai": "^1.1.0",
     "@zilliz/milvus2-sdk-node": "^2.6.4",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "dotenv": "^17.2.3",
     "langchain": "^1.0.3",
     "zod": "^4.1.12"
