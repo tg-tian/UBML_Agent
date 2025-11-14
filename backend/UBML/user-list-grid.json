@@ -1,0 +1,63 @@
+{
+  "id": "user-list-grid",
+  "type": "data-grid",
+  "appearance": {
+    "class": "user-list-grid"
+  },
+  "showStripe": true,
+  "showBorder": false,
+  "dataSource": "userDataSource",
+  "columns": [
+    {
+      "field": "id",
+      "title": "用户ID",
+      "width": 80
+    },
+    {
+      "field": "username",
+      "title": "用户名",
+      "width": 120
+    },
+    {
+      "field": "phone",
+      "title": "手机号",
+      "width": 120
+    },
+    {
+      "field": "status",
+      "title": "状态",
+      "width": 80
+    }
+  ],
+  "identifyField": "id",
+  "editable": false,
+  "disabled": false,
+  "visible": true,
+  "rowNumber": {
+    "enable": true,
+    "heading": "序号",
+    "width": 36,
+    "showEllipsis": true
+  },
+  "pagination": {
+    "enable": true,
+    "index": 1,
+    "size": 20,
+    "showIndex": true,
+    "showPageInfo": true,
+    "sizeLimits": [
+      10,
+      20,
+      30,
+      50,
+      100
+    ]
+  },
+  "selection": {
+    "enable": true,
+    "multiSelect": false,
+    "showCheckbox": false,
+    "showSelection": false
+  },
+  "onClickRow": "handleUserDetail"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "product-search-form",
+  "type": "response-form",
+  "appearance": {
+    "class": "product-search-form"
+  },
+  "contents": [
+    {
+      "id": "product-name-search",
+      "type": "input-group",
+      "label": "商品名称",
+      "placeholder": "请输入商品名称",
+      "visible": true,
+      "editable": true
+    },
+    {
+      "id": "category-select",
+      "type": "combo-list",
+      "label": "商品分类",
+      "placeholder": "请选择分类",
+      "data": [
+        {
+          "id": "1",
+          "name": "快餐"
+        },
+        {
+          "id": "2",
+          "name": "饮品"
+        },
+        {
+          "id": "3",
+          "name": "小吃"
+        }
+      ],
+      "idField": "id",
+      "textField": "name",
+      "valueField": "id",
+      "visible": true,
+      "editable": true
+    },
+    {
+      "id": "search-button",
+      "type": "button",
+      "text": "搜索",
+      "onClick": "handleProductSearch",
+      "visible": true
+    }
+  ],
+  "visible": true,
+  "labelAutoOverflow": false
+}
