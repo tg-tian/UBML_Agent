@@ -2,7 +2,7 @@ import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
 import { loadJsonComponents } from "../rag/loader.js";
 import { embeddings } from "../config/modelConfig.js";
 
-const milvus = new MilvusClient({ address: process.env.MILVUS_URL ?? "http://localhost:19530" });
+export const milvus = new MilvusClient({ address: process.env.MILVUS_URL ?? "http://localhost:19530" });
 
 const createUBMLComponentsCollection = async () => {
   return milvus.createCollection({

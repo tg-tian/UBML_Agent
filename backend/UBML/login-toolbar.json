@@ -1,0 +1,24 @@
+{
+  "id": "login-toolbar",
+  "type": "response-toolbar",
+  "appearance": {
+    "class": "login-toolbar",
+    "style": "margin-top: 20px;"
+  },
+  "alignment": "center",
+  "buttons": [
+    {
+      "id": "login-button",
+      "type": "button",
+      "appearance": {
+        "class": "login-button primary",
+        "style": "width: 100%; height: 44px; background-color: #1890ff; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: 500;"
+      },
+      "text": "登录",
+      "disable": false,
+      "visible": true,
+      "onClick": "handleLogin"
+    }
+  ],
+  "visible": true
+}

@@ -1,0 +1,97 @@
+{
+  "id": "login-form-container",
+  "type": "response-form",
+  "appearance": {
+    "class": "login-form-container",
+    "style": "width: 400px; margin: 100px auto; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);"
+  },
+  "contents": [
+    {
+      "id": "login-header",
+      "type": "component",
+      "appearance": {
+        "class": "login-header",
+        "style": "text-align: center; margin-bottom: 30px;"
+      },
+      "contents": [
+        {
+          "id": "logo",
+          "type": "component",
+          "appearance": {
+            "class": "logo",
+            "style": "font-size: 28px; font-weight: bold; color: #1890ff; margin-bottom: 10px;"
+          },
+          "contents": [],
+          "visible": true
+        },
+        {
+          "id": "title",
+          "type": "component",
+          "appearance": {
+            "class": "title",
+            "style": "font-size: 20px; color: #333;"
+          },
+          "contents": [],
+          "visible": true
+        }
+      ],
+      "visible": true
+    },
+    {
+      "id": "username-input",
+      "type": "input-group",
+      "appearance": {
+        "class": "username-input",
+        "style": "margin-bottom: 20px;"
+      },
+      "label": "用户名/邮箱",
+      "placeholder": "请输入用户名或邮箱",
+      "required": true,
+      "inputType": "input",
+      "maxLength": 50,
+      "enableClear": true,
+      "visible": true,
+      "binding": {
+        "field": "username",
+        "entity": "user"
+      }
+    },
+    {
+      "id": "password-input",
+      "type": "input-group",
+      "appearance": {
+        "class": "password-input",
+        "style": "margin-bottom: 20px;"
+      },
+      "label": "密码",
+      "placeholder": "请输入密码",
+      "required": true,
+      "inputType": "password",
+      "maxLength": 20,
+      "enableClear": true,
+      "enableViewPassword": true,
+      "visible": true,
+      "binding": {
+        "field": "password",
+        "entity": "user"
+      }
+    },
+    {
+      "id": "remember-me-checkbox",
+      "type": "check-box",
+      "appearance": {
+        "class": "remember-me-checkbox",
+        "style": "margin-bottom: 20px;"
+      },
+      "text": "记住我",
+      "value": false,
+      "visible": true,
+      "binding": {
+        "field": "rememberMe",
+        "entity": "user"
+      }
+    }
+  ],
+  "visible": true,
+  "labelAutoOverflow": false
+}

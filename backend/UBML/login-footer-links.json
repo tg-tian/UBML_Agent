@@ -1,0 +1,35 @@
+{
+  "id": "login-footer-links",
+  "type": "component",
+  "appearance": {
+    "class": "login-footer-links",
+    "style": "margin-top: 20px; text-align: center; font-size: 14px;"
+  },
+  "contents": [
+    {
+      "id": "forgot-password-link",
+      "type": "button",
+      "appearance": {
+        "class": "forgot-password-link",
+        "style": "color: #1890ff; background: none; border: none; cursor: pointer; margin-right: 20px;"
+      },
+      "text": "忘记密码？",
+      "disable": false,
+      "visible": true,
+      "onClick": "handleForgotPassword"
+    },
+    {
+      "id": "register-link",
+      "type": "button",
+      "appearance": {
+        "class": "register-link",
+        "style": "color: #1890ff; background: none; border: none; cursor: pointer;"
+      },
+      "text": "注册新账号",
+      "disable": false,
+      "visible": true,
+      "onClick": "handleRegister"
+    }
+  ],
+  "visible": true
+}

@@ -1,10 +1,11 @@
 import { createAgent } from "langchain";
 import { DeepSeek } from "../config/modelConfig.js";
 import ubmlSystemPrompt from "../prompt/ubmlPrompt.js";
-import { MessagesAnnotation } from "@langchain/langgraph";
 import { retrieveUBML } from "../tools/retrieve_UBML.js";
 import { loadFiles } from "../tools/load_files.js";
 import { searchRelevantInfo } from "../tools/search_relevant_info.js";
+import { UBMLState } from "../state/ubmlState.js";
+import * as z from "zod";
 
 const agent = createAgent({
   model: DeepSeek,
@@ -12,19 +13,18 @@ const agent = createAgent({
   systemPrompt: ubmlSystemPrompt,
 });
 
-export const ubmlAgent = async (state: typeof MessagesAnnotation.State) => {
-  console.log("ubmlAgent state:", state);
-  const recentMessages = (state.messages ?? []).slice(-3);
-  const tempState = {
-    ...state,
-    messages: recentMessages,
-  };
-  const result = await agent.invoke(tempState);
-  const lastMessage = result?.messages?.[result.messages.length - 1];
-  const ubmljson = lastMessage?.content?.toString?.() ?? "";
+export const ubmlAgent = async (state: z.infer<typeof UBMLState>) => {
+  if((state.messages?.length ?? 0) >=4){
+    state = {
+      ...state,
+      messages: state.messages?.slice(-2),
+    };
+  }
+  const result = await agent.invoke(state);
+  const newMessage = result.messages[result.messages.length - 1];
   return {
     ...state,
-    messages: [...(state.messages ?? []), lastMessage],
-    ubmljson,
+    messages: state.messages.concat([newMessage]),
+    ubmlJson: newMessage.content
   };
 };

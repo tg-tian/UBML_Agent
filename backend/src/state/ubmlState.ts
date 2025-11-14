@@ -1,7 +1,13 @@
-import { MessagesAnnotation } from "@langchain/langgraph";
+import { BaseMessage } from "@langchain/core/messages";
+import { MessagesZodMeta } from "@langchain/langgraph";
+import { registry } from "@langchain/langgraph/zod";
+import * as z from "zod";
 
-export interface UBMLState {
-  messages: any[]; // LangGraph 的标准消息结构
-  requirements?: string;           // 需求分析结果
-  ubmlJson?: Record<string, any>;  // UBML JSON 数据
-}
+export const UBMLState = z.object({
+  messages: z
+    .array(z.custom<BaseMessage>())
+    .register(registry, MessagesZodMeta as any),
+  requirements: z.string().optional(),
+  ubmlJson: z.string().optional(),
+  suggestions: z.string().optional()
+});
