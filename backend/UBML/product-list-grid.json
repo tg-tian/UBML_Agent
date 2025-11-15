@@ -1,0 +1,84 @@
+{
+  "id": "product-list-grid",
+  "type": "data-grid",
+  "appearance": {
+    "class": "product-list-grid"
+  },
+  "showStripe": true,
+  "showBorder": false,
+  "dataSource": "productDataSource",
+  "columns": [
+    {
+      "field": "id",
+      "title": "商品ID",
+      "width": 80
+    },
+    {
+      "field": "name",
+      "title": "商品名称",
+      "width": 150
+    },
+    {
+      "field": "categoryName",
+      "title": "分类",
+      "width": 100
+    },
+    {
+      "field": "price",
+      "title": "价格",
+      "width": 80,
+      "formatter": "currency"
+    },
+    {
+      "field": "stock",
+      "title": "库存",
+      "width": 80
+    },
+    {
+      "field": "merchantName",
+      "title": "商家",
+      "width": 120
+    },
+    {
+      "field": "rating",
+      "title": "评分",
+      "width": 80
+    },
+    {
+      "field": "sales",
+      "title": "月销量",
+      "width": 80
+    }
+  ],
+  "identifyField": "id",
+  "editable": false,
+  "disabled": false,
+  "visible": true,
+  "rowNumber": {
+    "enable": true,
+    "heading": "序号",
+    "width": 36,
+    "showEllipsis": true
+  },
+  "pagination": {
+    "enable": true,
+    "index": 1,
+    "size": 20,
+    "showIndex": true,
+    "showPageInfo": true,
+    "sizeLimits": [
+      10,
+      20,
+      30,
+      50,
+      100
+    ]
+  },
+  "selection": {
+    "enable": true,
+    "multiSelect": false,
+    "showCheckbox": false,
+    "showSelection": false
+  },
+  "onClickRow": "handleProductDetail"
+}
